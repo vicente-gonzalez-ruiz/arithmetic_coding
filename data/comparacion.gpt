@@ -1,0 +1,14 @@
+set samples 1000
+# set grid
+set xrange [0.0001:1]
+set yrange [0:8]
+set xtics (0,"1/16" 0.0625, "1/8" 0.125, "1/4" 0.25, "1/2" 0.5, 1)
+set ytics (0,1,2,3,4,5,6,7,8,9,10)
+set xlabel "$p(s)$"
+set ylabel "$l(s)$"
+set key top
+set terminal fig color textspecial
+set output "comparacion.fig"
+set key spacing 1.5
+plot ceil(-log(x)/log(2.0)) title "Huffman coding" with steps,\
+-log(x)/log(2.0) title "Arithmetic coding" with steps
