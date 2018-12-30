@@ -1,0 +1,134 @@
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "<none>"
+%%% End:
+
+\title{Arithmetic coding}
+
+\author{Vicente González Ruiz}
+
+\maketitle
+
+\section{Basics}
+
+\begin{itemize}
+\tightlist
+\item
+  Arithmetic coding~\cite{rissanen1979arithmetic, witten1987arithmetic}relaxes the Eq. (Eq:Huffman), verifying that, for
+  every encoded symbol, \begin{equation}
+    l\big(c(s)\big) = I(s), \tag{Eq:arithmetic}
+  \end{equation} i.e.~the number of bits of data (code-word) assigned by
+  the encoder is equal to the number of bits of information that the
+  symbol represent.
+\end{itemize}
+
+\img{600}{graphics/comparacion.png}
+
+\begin{itemize}
+\tightlist
+\item
+  It can be said that, arithmetic coding is optimal because the average
+  length of an arithmetic code is equal to the entropy of the
+  information source, measured in bits/symbol.
+\end{itemize}
+\img{500}{graphics/aritmetica_ejemplo.png}
+
+\section{An ideal encoder}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Let \([L,H)\leftarrow [0.0,1.0)\) an interval of real numbers.
+\item
+  While the input is not exhausted:
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    Split \([L,H)\) into so many sub-intervals as different symbols are
+    in the alphabet. The size of each sub-interval is proportional to
+    the probability of the corresponding symbol.
+  \item
+    Select the sub-interval \([L',H')\) associated with the encoded
+    symbol.
+  \item
+    \([L,H)\leftarrow [L',H')\).
+  \end{enumerate}
+\item
+  Output a real number \(x\in[L,H)\) (the arithmetic code-stream). The
+  number of decimals of \(x\) should be large enough to distinguish the
+  final sub-interval \([L,H)\) from the rest of possibilities.
+\end{enumerate}
+
+\subsection{Example}
+\begin{itemize}
+\tightlist
+\item
+  Imagine a binary sequence, where \(p(\text{A})=3/4\) and
+  \(p(\text{B})=1/4\). Compute the arithmetic code of the sequences A,
+  B, AA, AB, BA y BB.
+\end{itemize}
+
+\section{An ideal decoder}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Let \([L,H)\leftarrow [0.0,1.0)\) the initial interval.
+\item
+  While the input is not exhausted:
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    Split \([L,H)\) in so many sub-intervals as different symbols are in
+    the alphabet. The size of each sub-interval is proportional to the
+    probability of the corresponding symbol.
+  \item
+    Input so many bits of \(x\) as they are needed to:
+
+    \begin{enumerate}
+    \def\labelenumiii{\arabic{enumiii}.}
+    \tightlist
+    \item
+      Select the sub-interval \([L',H')\) that contains \(x\).
+    \item
+      Output the symbol that \([L',H')\) represents.
+    \item
+      \([L,H)\leftarrow[L',H')\).
+    \end{enumerate}
+  \end{enumerate}
+\end{enumerate}
+
+\subsection{Example}
+
+TO-DO
+
+\section{Incremental transmission}
+\begin{itemize}
+\item
+  It is not necessary to wait for the end of the encoding to generate
+  the arithmetic code. When we work with binary representations of the
+  real numbers \(L\) and \(H\), their most significant bits become
+  identical when the interval is reduced. These bits belong to the
+  output arithmetic code, therefore, they can be output as soon as they
+  match.
+
+  For example, when the symbol B is encoded, a code-bit 1 can be output
+  because any sequence of symbols that start with B have a code-word
+  that begins with 1.
+\item
+  When the most significant bits of \(L\) and \(H\) are output, the bits
+  of each register are shifted to the left, and new bits need to be
+  inserted. The results is an automatic zoom of the selected
+  sub-interval.
+
+  Following with the previous example, the register shifting generates
+  an ampliation of the \([0.50,1.00)\) interval to the \([0.00,1.00)\).
+\end{itemize}
+
+\section{Lab}
+
+TO-DO.
+
+\bibliography{text-compression}
