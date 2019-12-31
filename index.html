@@ -26,17 +26,42 @@ class="ecrm-1200">Vicente Gonz</span><span
 class="ecrm-1200">á</span><span 
 class="ecrm-1200">lez Ruiz</span></div><br />
 <div class="date" ><span 
-class="ecrm-1200">May 13, 2019</span></div>
+class="ecrm-1200">December 31, 2019</span></div>
    </div>
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Contents</h3>
+   <div class="tableofcontents">
+   <span class="sectionToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">Basics</a></span>
+<br />   <span class="sectionToc" >2 <a 
+href="#x1-30002" id="QQ2-1-3">An ideal encoder</a></span>
+<br />    <span class="subsectionToc" >2.1 <a 
+href="#x1-40002.1" id="QQ2-1-4">Example</a></span>
+<br />   <span class="sectionToc" >3 <a 
+href="#x1-50003" id="QQ2-1-5">An ideal decoder</a></span>
+<br />    <span class="subsectionToc" >3.1 <a 
+href="#x1-60003.1" id="QQ2-1-6">Example</a></span>
+<br />   <span class="sectionToc" >4 <a 
+href="#x1-70004" id="QQ2-1-7">Incremental transmission</a></span>
+<br />   <span class="sectionToc" >5 <a 
+href="#x1-80005" id="QQ2-1-8">Lab</a></span>
+<br />   <span class="sectionToc" ><a 
+href="#Q1-1-10">References</a></span>
+   </div>
+<!--l. 6--><p class="noindent" >
+</p>
    <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
- id="x1-10001"></a>Basics</h3>
+ id="x1-20001"></a>Basics</h3>
      <ul class="itemize1">
      <li class="itemize">Arithmetic coding <span class="cite">[<a 
 href="#Xrissanen1979arithmetic">1</a>, <a 
 href="#Xwitten1987arithmetic">2</a>]</span>relaxes the Eq. (Eq:Huﬀman), verifying that, for every
      encoded symbol, <table class="equation"><tr><td> <a 
- id="x1-1001r1"></a>
-     <!--l. 18--><math 
+ id="x1-2001r1"></a>
+                                                                  
+
+                                                                  
+     <!--l. 12--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="block" class="equation">
                                             <mi 
@@ -54,29 +79,26 @@ class="MathClass-open">(</mo><mrow><mi
 class="MathClass-close">)</mo></mrow><mo 
 class="MathClass-punc">,</mo>
                                                                                         <mstyle 
-   id="x1-1002r0"  class="label" ></mstyle><!--endlabel-->
+   id="x1-2002r0"  class="label" ></mstyle><!--endlabel-->
 </math></td><td class="eq-no">(Eq:arithmetic)<a 
- id="x1-1003r0"></a></td></tr></table>
-     <!--l. 20--><p class="noindent" >i.e. the number of bits of data (code-word) assigned by the encoder is equal to
+ id="x1-2003r0"></a></td></tr></table>
+     <!--l. 14--><p class="noindent" >i.e. the number of bits of data (code-word) assigned by the encoder is equal to
      the number of bits of information that the symbol represent.</p></li></ul>
-<!--l. 25--><p class="noindent" > <div style="text-align:center;"> <img width=600 src="graphics/comparacion.png" /> </div> 
+<!--l. 19--><p class="noindent" ><div style="text-align:center;"> <img width=600 src="graphics/comparacion.png" /> </div> 
 </p>
      <ul class="itemize1">
      <li class="itemize">It can be said that, arithmetic coding is optimal because the average length
      of an arithmetic code is equal to the entropy of the information source,
      measured in bits/symbol.</li></ul>
-                                                                  
-
-                                                                  
-<!--l. 34--><p class="noindent" > <div style="text-align:center;"> <img width=500 src="graphics/aritmetica_ejemplo.png" /> </div> 
-</p><!--l. 36--><p class="noindent" >
+<!--l. 28--><p class="noindent" ><div style="text-align:center;"> <img width=500 src="graphics/aritmetica_ejemplo.png" /> </div> 
+</p><!--l. 30--><p class="noindent" >
 </p>
    <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
- id="x1-20002"></a>An ideal encoder</h3>
-<!--l. 37--><p class="noindent" >
+ id="x1-30002"></a>An ideal encoder</h3>
+<!--l. 31--><p class="noindent" >
      </p><ol  class="enumerate1" >
      <li 
-  class="enumerate" id="x1-2002x1">Let <!--l. 41--><math 
+  class="enumerate" id="x1-3002x1">Let <!--l. 35--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mrow ><mo 
@@ -94,10 +116,10 @@ class="MathClass-close">)</mo></mrow></mrow></math>
      an interval of real numbers.
      </li>
      <li 
-  class="enumerate" id="x1-2004x2">While the input is not exhausted:
+  class="enumerate" id="x1-3004x2">While the input is not exhausted:
          <ol  class="enumerate2" >
          <li 
-  class="enumerate" id="x1-2006x1">Split <!--l. 48--><math 
+  class="enumerate" id="x1-3006x1">Split <!--l. 42--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mrow ><mo 
@@ -111,7 +133,7 @@ class="MathClass-close">)</mo></mrow></mrow></math>
          corresponding symbol.
          </li>
          <li 
-  class="enumerate" id="x1-2008x2">Select the sub-interval <!--l. 52--><math 
+  class="enumerate" id="x1-3008x2">Select the sub-interval <!--l. 46--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mrow ><mo 
@@ -131,7 +153,7 @@ class="MathClass-close">)</mo></mrow></mrow></math>
          associated with the encoded symbol.
          </li>
          <li 
-  class="enumerate" id="x1-2010x3"><!--l. 55--><math 
+  class="enumerate" id="x1-3010x3"><!--l. 49--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mrow ><mo 
@@ -154,9 +176,12 @@ class="MathClass-punc">,</mo><msup><mrow
 >′</mi></mrow></msup 
 ></mrow><mo 
 class="MathClass-close">)</mo></mrow></mrow></math>.</li></ol>
+                                                                  
+
+                                                                  
      </li>
      <li 
-  class="enumerate" id="x1-2012x3">Output a real number <!--l. 58--><math 
+  class="enumerate" id="x1-3012x3">Output a real number <!--l. 52--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -168,13 +193,13 @@ class="MathClass-punc">,</mo><mi
 >H</mi></mrow><mo 
 class="MathClass-close">)</mo></mrow></mrow></math>
      (the arithmetic code-stream). The number of decimals of
-     <!--l. 59--><math 
+     <!--l. 53--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >x</mi></mrow></math>
      should be large enough to distinguish the ﬁnal sub-interval
-     <!--l. 60--><math 
+     <!--l. 54--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mrow ><mo 
@@ -184,12 +209,12 @@ class="MathClass-punc">,</mo><mi
 >H</mi></mrow><mo 
 class="MathClass-close">)</mo></mrow></mrow></math>
      from the rest of possibilities.</li></ol>
-<!--l. 63--><p class="noindent" >
+<!--l. 57--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">2.1   </span> <a 
- id="x1-30002.1"></a>Example</h4>
+ id="x1-40002.1"></a>Example</h4>
      <ul class="itemize1">
-     <li class="itemize">Imagine a binary sequence, where <!--l. 67--><math 
+     <li class="itemize">Imagine a binary sequence, where <!--l. 61--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -199,7 +224,7 @@ class="text"><mtext  >A</mtext></mstyle></mrow><mo
 class="MathClass-close">)</mo></mrow> <mo 
 class="MathClass-rel">=</mo> <mn>3</mn><mo 
 class="MathClass-bin">∕</mo><mn>4</mn></mrow></math>
-     and <!--l. 68--><math 
+     and <!--l. 62--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -210,17 +235,14 @@ class="MathClass-close">)</mo></mrow> <mo
 class="MathClass-rel">=</mo> <mn>1</mn><mo 
 class="MathClass-bin">∕</mo><mn>4</mn></mrow></math>.
      Compute the arithmetic code of the sequences A, B, AA, AB, BA y BB.</li></ul>
-                                                                  
-
-                                                                  
-<!--l. 72--><p class="noindent" >
+<!--l. 66--><p class="noindent" >
 </p>
    <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
- id="x1-40003"></a>An ideal decoder</h3>
-<!--l. 73--><p class="noindent" >
+ id="x1-50003"></a>An ideal decoder</h3>
+<!--l. 67--><p class="noindent" >
      </p><ol  class="enumerate1" >
      <li 
-  class="enumerate" id="x1-4002x1">Let <!--l. 77--><math 
+  class="enumerate" id="x1-5002x1">Let <!--l. 71--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mrow ><mo 
@@ -238,10 +260,10 @@ class="MathClass-close">)</mo></mrow></mrow></math>
      the initial interval.
      </li>
      <li 
-  class="enumerate" id="x1-4004x2">While the input is not exhausted:
+  class="enumerate" id="x1-5004x2">While the input is not exhausted:
          <ol  class="enumerate2" >
          <li 
-  class="enumerate" id="x1-4006x1">Split <!--l. 84--><math 
+  class="enumerate" id="x1-5006x1">Split <!--l. 78--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mrow ><mo 
@@ -255,16 +277,16 @@ class="MathClass-close">)</mo></mrow></mrow></math>
          corresponding symbol.
          </li>
          <li 
-  class="enumerate" id="x1-4008x2">Input so many bits of <!--l. 88--><math 
+  class="enumerate" id="x1-5008x2">Input so many bits of <!--l. 82--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >x</mi></mrow></math>
          as they are needed to:
-         <!--l. 90--><p class="noindent" >
+         <!--l. 84--><p class="noindent" >
              </p><ol  class="enumerate3" >
              <li 
-  class="enumerate" id="x1-4010x1">Select the sub-interval <!--l. 94--><math 
+  class="enumerate" id="x1-5010x1">Select the sub-interval <!--l. 88--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mrow ><mo 
@@ -281,14 +303,17 @@ class="MathClass-punc">,</mo><msup><mrow
 >′</mi></mrow></msup 
 ></mrow><mo 
 class="MathClass-close">)</mo></mrow></mrow></math>
-             that contains <!--l. 94--><math 
+             that contains <!--l. 88--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >x</mi></mrow></math>.
+                                                                  
+
+                                                                  
              </li>
              <li 
-  class="enumerate" id="x1-4012x2">Output the symbol that <!--l. 96--><math 
+  class="enumerate" id="x1-5012x2">Output the symbol that <!--l. 90--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mrow ><mo 
@@ -308,7 +333,7 @@ class="MathClass-close">)</mo></mrow></mrow></math>
              represents.
              </li>
              <li 
-  class="enumerate" id="x1-4014x3"><!--l. 98--><math 
+  class="enumerate" id="x1-5014x3"><!--l. 92--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mrow ><mo 
@@ -333,27 +358,24 @@ class="MathClass-punc">,</mo><msup><mrow
 class="MathClass-close">)</mo></mrow></mrow></math>.</li></ol>
          </li></ol>
      </li></ol>
-<!--l. 103--><p class="noindent" >
+<!--l. 97--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">3.1   </span> <a 
- id="x1-50003.1"></a>Example</h4>
-<!--l. 105--><p class="noindent" >TO-DO
-</p><!--l. 107--><p class="noindent" >
+ id="x1-60003.1"></a>Example</h4>
+<!--l. 99--><p class="noindent" >TO-DO
+</p><!--l. 101--><p class="noindent" >
 </p>
    <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
- id="x1-60004"></a>Incremental transmission</h3>
+ id="x1-70004"></a>Incremental transmission</h3>
      <ul class="itemize1">
      <li class="itemize">It is not necessary to wait for the end of the encoding to generate the
-                                                                  
-
-                                                                  
      arithmetic code. When we work with binary representations of the real
-     numbers <!--l. 112--><math 
+     numbers <!--l. 106--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >L</mi></mrow></math>
-     and <!--l. 112--><math 
+     and <!--l. 106--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -361,16 +383,16 @@ display="inline" ><mrow
      their most signiﬁcant bits become identical when the interval is reduced.
      These bits belong to the output arithmetic code, therefore, they can be
      output as soon as they match.
-     <!--l. 117--><p class="noindent" >For example, when the symbol B is encoded, a code-bit 1 can be output
+     <!--l. 111--><p class="noindent" >For example, when the symbol B is encoded, a code-bit 1 can be output
      because any sequence of symbols that start with B have a code-word that
      begins with 1.
      </p></li>
-     <li class="itemize">When the most signiﬁcant bits of <!--l. 121--><math 
+     <li class="itemize">When the most signiﬁcant bits of <!--l. 115--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >L</mi></mrow></math>
-     and <!--l. 121--><math 
+     and <!--l. 115--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -378,8 +400,8 @@ display="inline" ><mrow
      are output, the bits of each register are shifted to the left, and new bits
      need to be inserted. The results is an automatic zoom of the selected
      sub-interval.
-     <!--l. 126--><p class="noindent" >Following with the previous example, the register shifting generates an
-     ampliation of the <!--l. 127--><math 
+     <!--l. 120--><p class="noindent" >Following with the previous example, the register shifting generates an
+     ampliation of the <!--l. 121--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mrow ><mo 
@@ -388,7 +410,7 @@ class="MathClass-punc">.</mo><mn>5</mn><mn>0</mn><mo
 class="MathClass-punc">,</mo><mn>1</mn><mo 
 class="MathClass-punc">.</mo><mn>0</mn><mn>0</mn></mrow><mo 
 class="MathClass-close">)</mo></mrow></mrow></math>
-     interval to the <!--l. 127--><math 
+     interval to the <!--l. 121--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mrow ><mo 
@@ -397,15 +419,18 @@ class="MathClass-punc">.</mo><mn>0</mn><mn>0</mn><mo
 class="MathClass-punc">,</mo><mn>1</mn><mo 
 class="MathClass-punc">.</mo><mn>0</mn><mn>0</mn></mrow><mo 
 class="MathClass-close">)</mo></mrow></mrow></math>.</p></li></ul>
-<!--l. 130--><p class="noindent" >
+                                                                  
+
+                                                                  
+<!--l. 124--><p class="noindent" >
 </p>
    <h3 class="sectionHead"><span class="titlemark">5   </span> <a 
- id="x1-70005"></a>Lab</h3>
-<!--l. 132--><p class="noindent" >TO-DO.
+ id="x1-80005"></a>Lab</h3>
+<!--l. 126--><p class="noindent" >TO-DO.
 </p><!--l. 1--><p class="noindent" >
 </p>
    <h3 class="likesectionHead"><a 
- id="x1-80005"></a>References</h3>
+ id="x1-90005"></a>References</h3>
 <!--l. 1--><p class="noindent" >
    </p><div class="thebibliography">
    <p class="bibitem" ><span class="biblabel">
@@ -424,6 +449,8 @@ href="https://scholar.google.es/scholar?hl=es&as_sdt=0%2C5&q=Witten+Neal+Cleary+
 class="ecti-1000">Communications of the ACM</span>, 30(6):520–540, 1987.
 </p>
    </div>
+<a 
+ id="Q1-1-10"></a>
     
 </body> 
 </html>
