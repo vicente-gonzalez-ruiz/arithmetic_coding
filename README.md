@@ -1,1 +1,1 @@
-[Click me](https://cdn.rawgit.com/vicente-gonzalez-ruiz/Arithmetic_Coding/master/index.html).
+[Click me](https://vicente-gonzalez-ruiz.github.io/arithmetic_coding/).
