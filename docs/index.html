@@ -19,7 +19,7 @@
 
 <h2 class='titleHead'>Arithmetic coding</h2>
  <div class='author'><span class='ecrm-1200'>Vicente González Ruiz</span></div><br />
-<div class='date'><span class='ecrm-1200'>December 8, 2022</span></div>
+<div class='date'><span class='ecrm-1200'>December 9, 2022</span></div>
    </div>
    <h3 class='likesectionHead' id='contents'><a id='x1-1000'></a>Contents</h3>
    <div class='tableofcontents'>
@@ -34,8 +34,8 @@
 </p>
    <h3 class='sectionHead' id='basics'><span class='titlemark'>1   </span> <a id='x1-20001'></a>Basics</h3>
      <ul class='itemize1'>
-     <li class='itemize'>Arithmetic coding <span class='cite'>[<a href='#Xrissanen1979arithmetic'>1</a>, <a href='#Xwitten1987arithmetic'>2</a>]</span>relaxes the Eq. (Eq:Huffman), verifying that, for every
-     encoded symbol, \begin {equation}  l\big (c(s)\big ) = I(s), \tag {Eq:arithmetic}  \end {equation}
+     <li class='itemize'>Arithmetic coding <span class='cite'>[<a href='#Xrissanen1979arithmetic'>2</a>, <a href='#Xwitten1987arithmetic'>3</a>, <a href='#Xnelson96datacompression'>1</a>]</span> relaxes the Eq. (Eq:Huffman), verifying that, for
+     every encoded symbol, \begin {equation}  l\big (c(s)\big ) = I(s), \tag {Eq:arithmetic}  \end {equation}
      i.e. the number of bits of data (code-word) assigned by the encoder is equal to
      the number of bits of information that the symbol represent.</li></ul>
 <!-- l. 19 --><p class='noindent'><div style='text-align:center;'> <img src='graphics/comparacion.svg' /> </div> 
@@ -128,11 +128,18 @@
      ampliation of the \([0.50,1.00)\) interval to the \([0.00,1.00)\).</p></li></ul>
    <div class='thebibliography'>
    <p class='bibitem'><span class='biblabel'>
- [1]<span class='bibsp'>   </span></span><a id='Xrissanen1979arithmetic'></a>Jorma Rissanen and Glen G. Langdon. <a href='https://scholar.google.es/scholar?hl=es&amp;as_sdt=0%2C5&amp;q=+Rissanen+Langdon+Arithmetic+Coding+1979&amp;btnG='>Arithmetic coding</a>. <span class='ecti-1000'>IBM Journal
-   </span><span class='ecti-1000'>of research and development</span>, 23(2):149–162, 1979.
+ [1]<span class='bibsp'>   </span></span><a id='Xnelson96datacompression'></a>Nelson M. and Gailly J.  <a href='https://theswissbay.ch/pdf/Gentoomen%20Library/Information%20Theory/Compression/The%20Data%20Compression%20Book%202nd%20Ed%20-%20Mark%20Nelson.pdf'><span class='ecti-1000'>The Data Compression Book</span></a>.  M&amp;T Books,
+   1996.
    </p>
    <p class='bibitem'><span class='biblabel'>
- [2]<span class='bibsp'>   </span></span><a id='Xwitten1987arithmetic'></a>Ian H Witten, Radford M Neal, and John G Cleary. <a href='https://scholar.google.es/scholar?hl=es&amp;as_sdt=0%2C5&amp;q=Witten+Neal+Cleary+Arithmetic+Coding+for+Data+Compression&amp;btnG='>Arithmetic coding
+ [2]<span class='bibsp'>   </span></span><a id='Xrissanen1979arithmetic'></a>Jorma Rissanen and Glen G. Langdon. <a href='https://scholar.google.es/scholar?hl=es&amp;as_sdt=0%2C5&amp;q=+Rissanen+Langdon+Arithmetic+Coding+1979&amp;btnG='>Arithmetic coding</a>. <span class='ecti-1000'>IBM Journal
+   </span><span class='ecti-1000'>of research and development</span>, 23(2):149–162, 1979.
+   </p>
+                                                                  
+
+                                                                  
+   <p class='bibitem'><span class='biblabel'>
+ [3]<span class='bibsp'>   </span></span><a id='Xwitten1987arithmetic'></a>Ian H Witten, Radford M Neal, and John G Cleary. <a href='https://scholar.google.es/scholar?hl=es&amp;as_sdt=0%2C5&amp;q=Witten+Neal+Cleary+Arithmetic+Coding+for+Data+Compression&amp;btnG='>Arithmetic coding
    for data compression</a>. <span class='ecti-1000'>Communications of the ACM</span>, 30(6):520–540, 1987.
 </p>
    </div>
