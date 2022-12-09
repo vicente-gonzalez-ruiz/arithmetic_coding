@@ -19,7 +19,7 @@
 
 <h2 class='titleHead'>Arithmetic coding</h2>
  <div class='author'><span class='ecrm-1200'>Vicente González Ruiz</span></div><br />
-<div class='date'><span class='ecrm-1200'>July 11, 2022</span></div>
+<div class='date'><span class='ecrm-1200'>December 8, 2022</span></div>
    </div>
    <h3 class='likesectionHead' id='contents'><a id='x1-1000'></a>Contents</h3>
    <div class='tableofcontents'>
@@ -27,9 +27,7 @@
 <br />    <span class='sectionToc'>2 <a href='#an-ideal-encoder' id='QQ2-1-3'>An ideal encoder</a></span>
 <br />     <span class='subsectionToc'>2.1 <a href='#example' id='QQ2-1-4'>Example</a></span>
 <br />    <span class='sectionToc'>3 <a href='#an-ideal-decoder' id='QQ2-1-5'>An ideal decoder</a></span>
-<br />     <span class='subsectionToc'>3.1 <a href='#example1' id='QQ2-1-6'>Example</a></span>
-<br />    <span class='sectionToc'>4 <a href='#incremental-transmission' id='QQ2-1-7'>Incremental transmission</a></span>
-<br />    <span class='sectionToc'>5 <a href='#lab' id='QQ2-1-8'>Lab</a></span>
+<br />    <span class='sectionToc'>4 <a href='#incremental-transmission' id='QQ2-1-6'>Incremental transmission</a></span>
 <br />    <span class='sectionToc'><a href='#references'>References</a></span>
    </div>
 <!-- l. 6 --><p class='noindent'>
@@ -40,11 +38,11 @@
      encoded symbol, \begin {equation}  l\big (c(s)\big ) = I(s), \tag {Eq:arithmetic}  \end {equation}
      i.e. the number of bits of data (code-word) assigned by the encoder is equal to
      the number of bits of information that the symbol represent.</li></ul>
+<!-- l. 19 --><p class='noindent'><div style='text-align:center;'> <img src='graphics/comparacion.svg' /> </div> 
+</p>
                                                                   
 
                                                                   
-<!-- l. 19 --><p class='noindent'><div style='text-align:center;'> <img src='graphics/comparacion.svg' /> </div> 
-</p>
      <ul class='itemize1'>
      <li class='itemize'>It can be said that, arithmetic coding is optimal because the average length
      of an arithmetic code is equal to the entropy of the information source,
@@ -101,45 +99,34 @@
 <li class='enumerate' id='x1-5010x1'>Select the sub-interval \([L',H')\) that contains \(x\).
              </li>
 <li class='enumerate' id='x1-5012x2'>Output the symbol that \([L',H')\) represents.
+             </li>
                                                                   
 
                                                                   
-             </li>
 <li class='enumerate' id='x1-5014x3'>\([L,H)\leftarrow [L',H')\).</li></ol>
          </li></ol>
      </li></ol>
 <!-- l. 97 --><p class='noindent'>
 </p>
-   <h4 class='subsectionHead' id='example1'><span class='titlemark'>3.1   </span> <a id='x1-60003.1'></a>Example</h4>
-<!-- l. 99 --><p class='noindent'>TO-DO
-</p><!-- l. 101 --><p class='noindent'>
-</p>
-   <h3 class='sectionHead' id='incremental-transmission'><span class='titlemark'>4   </span> <a id='x1-70004'></a>Incremental transmission</h3>
+   <h3 class='sectionHead' id='incremental-transmission'><span class='titlemark'>4   </span> <a id='x1-60004'></a>Incremental transmission</h3>
      <ul class='itemize1'>
      <li class='itemize'>
-     <!-- l. 104 --><p class='noindent'>It is not necessary to wait for the end of the encoding to generate the
+     <!-- l. 100 --><p class='noindent'>It is not necessary to wait for the end of the encoding to generate the
      arithmetic code. When we work with binary representations of the real
      numbers  \(L\)  and  \(H\),  their  most  significant  bits  become  identical  when  the
      interval  is  reduced.  These  bits  belong  to  the  output  arithmetic  code,
      therefore, they can be output as soon as they match.
-     </p><!-- l. 111 --><p class='noindent'>For example, when the symbol B is encoded, a code-bit 1 can be output
+     </p><!-- l. 107 --><p class='noindent'>For example, when the symbol B is encoded, a code-bit 1 can be output
      because any sequence of symbols that start with B have a code-word that
      begins with 1.
      </p></li>
      <li class='itemize'>
-     <!-- l. 115 --><p class='noindent'>When the most significant bits of \(L\) and \(H\) are output, the bits of each register
+     <!-- l. 111 --><p class='noindent'>When the most significant bits of \(L\) and \(H\) are output, the bits of each register
      are shifted to the left, and new bits need to be inserted. The results is an
      automatic zoom of the selected sub-interval.
-     </p><!-- l. 120 --><p class='noindent'>Following with the previous example, the register shifting generates an
+     </p><!-- l. 116 --><p class='noindent'>Following with the previous example, the register shifting generates an
      ampliation of the \([0.50,1.00)\) interval to the \([0.00,1.00)\).</p></li></ul>
-<!-- l. 124 --><p class='noindent'>
-</p>
-   <h3 class='sectionHead' id='lab'><span class='titlemark'>5   </span> <a id='x1-80005'></a>Lab</h3>
-                                                                  
-
-                                                                  
-<!-- l. 126 --><p class='noindent'>TO-DO.
-   </p><div class='thebibliography'>
+   <div class='thebibliography'>
    <p class='bibitem'><span class='biblabel'>
  [1]<span class='bibsp'>   </span></span><a id='Xrissanen1979arithmetic'></a>Jorma Rissanen and Glen G. Langdon. <a href='https://scholar.google.es/scholar?hl=es&amp;as_sdt=0%2C5&amp;q=+Rissanen+Langdon+Arithmetic+Coding+1979&amp;btnG='>Arithmetic coding</a>. <span class='ecti-1000'>IBM Journal
    </span><span class='ecti-1000'>of research and development</span>, 23(2):149–162, 1979.
@@ -149,7 +136,7 @@
    for data compression</a>. <span class='ecti-1000'>Communications of the ACM</span>, 30(6):520–540, 1987.
 </p>
    </div>
-<p id='references'><a id='Q1-1-9'></a>
+<p id='references'><a id='Q1-1-7'></a>
     
 </p></body> 
 </html>
