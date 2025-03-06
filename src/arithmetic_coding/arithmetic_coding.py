@@ -1,18 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # Arithmetic Coding
-
-# In[5]:
-
-
-get_ipython().system('make -C ~/repos/bit_io')
-get_ipython().system('ln -sf ~/repos/bit_io/bit_io.py .')
-from bit_io import Bit_IO
-
-
-# In[69]:
-
+from bit_IO.bit_IO import Bit_IO # pip install --ignore-installed "bit_IO @ git+https://github.com/vicente-gonzalez-ruiz/bit_IO"
 
 class Arithmetic_Coding():
     
@@ -37,10 +23,6 @@ class Arithmetic_Coding():
     def scale_interval(self):
         self.low = 2*self.low
         self.high = 2*self.high + 1
-
-
-# In[70]:
-
 
 class Arithmetic_Encoding(Arithmetic_Coding):
     
@@ -94,10 +76,6 @@ class Arithmetic_Encoding(Arithmetic_Coding):
         index = symbol + 1
         self.encode_index(index, PDF, file)
 
-
-# In[71]:
-
-
 class Arithmetic_Decoding(Arithmetic_Coding):
     
     def __init__(self):
@@ -149,28 +127,3 @@ class Arithmetic_Decoding(Arithmetic_Coding):
     def decode_symbol(self, PDF, file):
         index = self.decode_index(PDF, file)
         return index - 1
-
-
-# In[81]:
-
-
-if __name__ == "__main__":
-    import random
-    f = open("/tmp/ac", "wb")
-    
-    # The probabilistic model has "alphabet_size + 1" entries,
-    # and PDF[0] is the cummulative count of all the symbols.
-    PDF = [2, 1, 0]
-    
-    encoder = Arithmetic_Encoding()
-    for i in range(32):
-        encoder.encode_symbol(random.randrange(2), PDF, f)
-    encoder.flush(f)
-    f.close()
-    get_ipython().system('hexdump -C /tmp/ac')
-    f = open("/tmp/ac", "rb")
-    decoder = Arithmetic_Decoding()
-    decoder.init(f)
-    for i in range(32):
-         print(i, decoder.decode_symbol(PDF, f))
-
