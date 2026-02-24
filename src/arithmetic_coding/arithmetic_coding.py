@@ -1,3 +1,5 @@
+from bitarray import bitarray
+
 class Arithmetic_Coding():
 
     BITS = 32
